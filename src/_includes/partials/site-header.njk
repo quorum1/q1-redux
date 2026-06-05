@@ -1,24 +1,34 @@
-  <header class="site-header">
-    <div class="site-header-inner">
+<header class="site-header">
+  <div class="site-header-inner">
 
-      <a href="/" class="site-name">{{ site.title }}</a>
+    <a href="/" class="site-logo-link" aria-label="Quorum1 home">
+      <img src="/assets/images/logo-horizontal.png" alt="Quorum1" />
+    </a>
 
-      <a href="/" class="site-logo-link" aria-label="Home">
-        <wa-icon name="atom" class="site-logo"></wa-icon>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/members/" class="nav-link">Members</a>
+      <a href="/practices/" class="nav-link">Practices</a>
+      <a href="/regions/" class="nav-link">Regions</a>
+      <a href="/dispatches/" class="nav-link">Dispatches</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="/signin/" class="btn btn-ghost">Sign in</a>
+      <a href="/join/" class="btn btn-primary">
+        Become a member
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="13 6 19 12 13 18"/>
+        </svg>
       </a>
-
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/about/" class="nav-link">About</a>
-        <a href="/features/" class="nav-link">Features</a>
-        <a href="/contact/" class="nav-link">Contact</a>
-      </nav>
-
-      <button class="hamburger" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
     </div>
-  </header>
+
+    <button class="hamburger" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>

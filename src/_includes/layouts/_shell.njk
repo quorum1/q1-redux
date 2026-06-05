@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% block head %}{% endblock %}
-  <link rel="stylesheet" href="/dist/styles/webawesome.css" />
+  {% block head %}
+    <title>{{ title }} — {{ site.title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+  {% endblock %}
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
@@ -14,6 +16,6 @@
 
   {% include "partials/site-footer.njk" %}
 
-  <script type="module" src="/assets/js/main.js"></script>
+  <script src="/assets/js/main.js" type="module"></script>
 </body>
 </html>

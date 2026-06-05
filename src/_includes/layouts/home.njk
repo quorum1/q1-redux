@@ -1,0 +1,12 @@
+{% extends "layouts/_shell.njk" %}
+
+{% block head %}
+  <title>{{ site.title }} — {{ site.description }}</title>
+  <meta name="description" content="{{ site.description }}">
+{% endblock %}
+
+{% block body %}
+  <main>
+    {{ content | safe }}
+  </main>
+{% endblock %}
