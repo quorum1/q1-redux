@@ -1,0 +1,53 @@
+---
+layout: layouts/page.njk
+title: Content
+description: Thought work from the Quorum1 network — whitepapers, talks, and podcasts.
+---
+
+<div class="page-header">
+  <div class="page-header-top">
+    <div>
+      <span class="eyebrow page-header-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-red)" aria-hidden="true"></span>
+        Thought work
+      </span>
+      <h1 class="page-title">Content.</h1>
+      <p class="page-subtitle">Quorum1 is a global network woven from the leading minds in systems change. Browse the thought work of our member individuals &amp; orgs.</p>
+    </div>
+  </div>
+</div>
+
+<div class="index-controls">
+  <div class="filter-tabs" role="tablist">
+    <button class="filter-tab active" data-filter="all">All content</button>
+    <button class="filter-tab" data-filter="written">Written</button>
+    <button class="filter-tab" data-filter="video">Video</button>
+    <button class="filter-tab" data-filter="audio">Audio</button>
+  </div>
+  <span class="index-count">{{ contentItems | length }} item{% if contentItems | length != 1 %}s{% endif %}</span>
+</div>
+
+<div class="index-grid-wide" id="content-grid">
+  {% for item in contentItems %}
+  <a href="/content/@{{ item.key }}/" class="index-card" data-format="{{ item.format }}">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <span class="badge badge-{{ item.format }}" style="font-size:10px">{{ item.format }}</span>
+      <span style="font-family:var(--font-display);font-size:11px;color:var(--ink-faint);letter-spacing:0.02em">
+        {% if item.wordCount %}{{ item.wordCount | string }} words{% endif %}
+        {% if item.duration %}{{ item.duration }} min{% endif %}
+      </span>
+    </div>
+    <p class="index-card-name" style="font-size:var(--fs-base)">{{ item.title }}</p>
+    <p class="index-card-tagline">{{ item.summary | truncate(100) }}</p>
+    <div class="index-card-footer">
+      <span class="index-card-meta">
+        {% for a in item.authors %}{{ a.name }}{% if not loop.last %}, {% endif %}{% endfor %}
+        {% if item.publishDate %} · {{ item.publishDate }}{% endif %}
+      </span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-line)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+    </div>
+  </a>
+  {% else %}
+  <p style="color:var(--ink-mute);font-family:var(--font-body)">No content yet.</p>
+  {% endfor %}
+</div>

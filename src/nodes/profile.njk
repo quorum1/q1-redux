@@ -1,0 +1,86 @@
+---
+pagination:
+  data: nodes
+  size: 1
+  alias: node
+permalink: "/nodes/@{{ node.key }}/"
+layout: layouts/page.njk
+---
+{% set title = node.name %}
+{% set description = node.tagline %}
+
+<div class="page-header">
+  <span class="eyebrow page-header-eyebrow" style="margin-bottom:12px">
+    <a href="/nodes/" style="color:var(--ink-mute);text-decoration:none">Nodes</a>
+    <span style="color:var(--ink-line)">/</span>
+    @{{ node.key }}
+  </span>
+  <div class="page-header-top">
+    <div>
+      <h1 class="page-title">{{ node.name }}</h1>
+      <p class="page-subtitle">{{ node.tagline }}</p>
+    </div>
+    <div class="page-header-actions">
+      <span class="badge badge-{{ node.type }}">{{ node.type | capitalize }} node</span>
+      <span class="badge badge-{{ node.status or 'active' }}">{{ node.status or "active" }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="profile-layout">
+
+  <div class="profile-main">
+
+    {% if node.description %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">About this node</h2>
+      <p class="profile-bio">{{ node.description }}</p>
+    </div>
+    {% endif %}
+
+    {% if node.members and node.members.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Members in this node</h2>
+      <div class="chip-list">
+        {% for m in node.members %}
+        <a href="/@{{ m.key }}/" class="chip">{{ m.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if node.orgs and node.orgs.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Organizations in this node</h2>
+      <div class="chip-list">
+        {% for o in node.orgs %}
+        <a href="/orgs/@{{ o.key }}/" class="chip">{{ o.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <aside class="profile-sidebar" aria-label="Node details">
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Node type</span>
+      <span class="sidebar-value">{{ node.type | capitalize }} node</span>
+    </div>
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Revenue share</span>
+      <span class="sidebar-value">{{ node.revenueShare }}% of routed projects</span>
+    </div>
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Members</span>
+      <span class="sidebar-value">{{ node.members | length }}</span>
+    </div>
+    <div class="sidebar-fact" style="border-bottom:none;padding-top:20px">
+      <a href="/how-it-works/" class="btn btn-secondary" style="width:100%;justify-content:center">
+        How nodes work
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+    </div>
+  </aside>
+
+</div>

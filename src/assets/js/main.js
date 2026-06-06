@@ -31,23 +31,23 @@ document.querySelectorAll('.nodes-tab').forEach(tab => {
   });
 });
 
-// ─── Content filter tabs ──────────────────────────────────────────────────────
+// ─── Generic filter tabs (content, orgs, members, etc.) ──────────────────────
 
-const filterTabs = document.querySelectorAll('.filter-tab');
-const contentCards = document.querySelectorAll('#content-cards .content-card');
-
-filterTabs.forEach(tab => {
+document.querySelectorAll('.filter-tab').forEach(tab => {
   tab.addEventListener('click', () => {
-    const filter = tab.dataset.filter;
-
-    filterTabs.forEach(t => {
+    const bar = tab.closest('[role="tablist"]') || tab.parentElement;
+    bar.querySelectorAll('.filter-tab').forEach(t => {
       t.classList.toggle('active', t === tab);
       t.setAttribute('aria-selected', String(t === tab));
     });
 
-    contentCards.forEach(card => {
-      const show = filter === 'all' || card.dataset.format === filter;
-      card.style.display = show ? '' : 'none';
+    const filter = tab.dataset.filter;
+    const grid = document.querySelector('#content-grid, #members-grid, #orgs-grid');
+    if (!grid) return;
+
+    grid.querySelectorAll('[data-format], [data-type]').forEach(card => {
+      const val = card.dataset.format || card.dataset.type;
+      card.style.display = (filter === 'all' || val === filter) ? '' : 'none';
     });
   });
 });
@@ -59,10 +59,20 @@ if (toggle) {
   const activate = () => {
     const on = toggle.classList.toggle('on');
     toggle.setAttribute('aria-checked', String(on));
-    // In a real implementation this would fetch/show draft content
   };
   toggle.addEventListener('click', activate);
   toggle.addEventListener('keydown', e => {
     if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); activate(); }
   });
 }
+
+// ─── FAQ accordion ────────────────────────────────────────────────────────────
+
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    item.classList.toggle('open', !isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+});

@@ -1,0 +1,17 @@
+{
+  "key": "governance-architecture",
+  "name": "Governance architecture.",
+  "tagline": "Design accountable, adaptable organizations from first principles.",
+  "description": "We design decision-making structures, accountability frameworks, and shared-governance models for your organization or coalition — from worker cooperatives to multi-stakeholder consortia. Engagements typically include discovery, co-design workshops, documentation, and ratification facilitation.",
+  "nodes": [
+    {"key": "governance-design", "name": "Governance Design"}
+  ],
+  "orgs": [
+    {"key": "commons-engine", "name": "Commons Engine"}
+  ],
+  "costMin": 15000,
+  "costMax": 50000,
+  "currency": "USD",
+  "status": "active",
+  "tags": ["governance", "org-design", "facilitation"]
+}

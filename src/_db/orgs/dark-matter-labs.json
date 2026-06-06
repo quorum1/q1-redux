@@ -1,0 +1,24 @@
+{
+  "key": "dark-matter-labs",
+  "name": "Dark Matter Labs",
+  "type": "service-org",
+  "tagline": "Research, design & systems change at the frontier.",
+  "description": "Dark Matter Labs is a mission-driven research and design organisation working to reimagine and redesign the 'dark matter' that shapes social, economic, and ecological systems — the underlying laws, regulations, standards, and incentives that structure the world.",
+  "website": "https://provocations.darkmatterlabs.org",
+  "joinDate": "2022-09",
+  "status": "active",
+  "practices": [
+    {"key": "regenerative-finance", "name": "Regenerative Finance"},
+    {"key": "governance-design", "name": "Governance Design"}
+  ],
+  "regions": [
+    {"key": "eu", "name": "European Union"},
+    {"key": "uk", "name": "United Kingdom"}
+  ],
+  "services": [
+    {"key": "regenerative-finance-design", "name": "Regenerative Finance Design"}
+  ],
+  "members": [
+    {"key": "yaw-darko", "name": "Yaw Darko"}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "key": "yaw-darko",
+  "name": "Yaw Darko",
+  "role": "Regenerative Finance Researcher & Strategist",
+  "location": "Accra, Ghana",
+  "bio": "Yaw Darko researches the intersection of regenerative economics, commons-based finance, and collective treasury design. He has advised organizations on token economics, shared treasury architecture, and post-extractive business models in Sub-Saharan Africa and beyond.",
+  "memberType": "individual",
+  "status": "active",
+  "joinDate": "2023-01",
+  "practices": [
+    {"key": "regenerative-finance", "name": "Regenerative Finance"},
+    {"key": "treasury-ops", "name": "Treasury Ops"}
+  ],
+  "regions": [
+    {"key": "sub-saharan-africa", "name": "Sub-Saharan Africa"}
+  ],
+  "orgs": [
+    {"key": "dark-matter-labs", "name": "Dark Matter Labs"}
+  ],
+  "links": {}
+}

@@ -1,0 +1,90 @@
+---
+pagination:
+  data: services
+  size: 1
+  alias: service
+permalink: "/services/@{{ service.key }}/"
+layout: layouts/page.njk
+---
+{% set title = service.name %}
+{% set description = service.tagline %}
+
+<div class="page-header">
+  <span class="eyebrow page-header-eyebrow" style="margin-bottom:12px">
+    <a href="/services/" style="color:var(--ink-mute);text-decoration:none">Services</a>
+    <span style="color:var(--ink-line)">/</span>
+    @{{ service.key }}
+  </span>
+  <div class="page-header-top">
+    <div>
+      <h1 class="page-title">{{ service.name }}</h1>
+      <p class="page-subtitle">{{ service.tagline }}</p>
+    </div>
+    <div class="page-header-actions">
+      <span style="font-family:var(--font-display);font-weight:700;font-size:var(--fs-lg);color:var(--ink)">
+        {{ service.costMin | costRange(service.costMax, service.currency) }}
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="profile-layout">
+
+  <div class="profile-main">
+
+    {% if service.description %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">What's included</h2>
+      <p class="profile-bio">{{ service.description }}</p>
+    </div>
+    {% endif %}
+
+    {% if service.nodes and service.nodes.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Delivered via</h2>
+      <div class="chip-list">
+        {% for n in service.nodes %}
+        <a href="/nodes/@{{ n.key }}/" class="chip">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-blue)" aria-hidden="true"></span>
+          {{ n.name }} node
+        </a>
+        {% endfor %}
+        {% for o in service.orgs %}
+        <a href="/orgs/@{{ o.key }}/" class="chip">{{ o.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if service.tags and service.tags.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Areas</h2>
+      <div class="chip-list">
+        {% for tag in service.tags %}
+        <span class="chip">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <aside class="profile-sidebar" aria-label="Service details">
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Cost range</span>
+      <span class="sidebar-value" style="font-weight:700;color:var(--ink);font-size:var(--fs-base)">{{ service.costMin | costRange(service.costMax, service.currency) }}</span>
+    </div>
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Status</span>
+      <span class="sidebar-value">{{ service.status | capitalize }}</span>
+    </div>
+    <div class="sidebar-fact" style="border-bottom:none;padding-top:20px;display:flex;flex-direction:column;gap:10px">
+      <a href="/hire/" class="btn btn-primary" style="width:100%;justify-content:center">
+        Get a quote
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+      <a href="/services/" class="btn btn-secondary" style="width:100%;justify-content:center">All services</a>
+    </div>
+  </aside>
+
+</div>

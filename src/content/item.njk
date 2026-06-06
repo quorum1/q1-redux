@@ -1,0 +1,102 @@
+---
+pagination:
+  data: contentItems
+  size: 1
+  alias: item
+permalink: "/content/@{{ item.key }}/"
+layout: layouts/page.njk
+---
+{% set title = item.title %}
+{% set description = item.summary %}
+
+<div class="page-header">
+  <span class="eyebrow page-header-eyebrow" style="margin-bottom:12px">
+    <a href="/content/" style="color:var(--ink-mute);text-decoration:none">Content</a>
+    <span style="color:var(--ink-line)">/</span>
+    @{{ item.key }}
+  </span>
+  <div class="page-header-top">
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+        <span class="badge badge-{{ item.format }}">{{ item.format }}</span>
+        <span style="font-family:var(--font-display);font-size:12px;color:var(--ink-mute);letter-spacing:0.04em">
+          {{ item.type }}
+          {% if item.wordCount %} · {{ item.wordCount | string }} words{% endif %}
+          {% if item.duration %} · {{ item.duration }} min{% endif %}
+        </span>
+      </div>
+      <h1 class="page-title" style="font-size:clamp(24px,3.5vw,44px)">{{ item.title }}</h1>
+    </div>
+    <div class="page-header-actions">
+      <span class="badge badge-{{ item.status }}">{{ item.status }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="profile-layout">
+
+  <div class="profile-main">
+
+    {% if item.summary %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Summary</h2>
+      <p class="profile-bio">{{ item.summary }}</p>
+    </div>
+    {% endif %}
+
+    {% if item.authors and item.authors.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">By</h2>
+      <div class="chip-list">
+        {% for a in item.authors %}
+        <a href="/@{{ a.key }}/" class="chip">{{ a.name }}</a>
+        {% endfor %}
+        {% for o in item.authorOrgs %}
+        <a href="/orgs/@{{ o.key }}/" class="chip">{{ o.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if item.tags and item.tags.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Topics</h2>
+      <div class="chip-list">
+        {% for tag in item.tags %}
+        <span class="chip">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <aside class="profile-sidebar" aria-label="Content details">
+    {% if item.publishDate %}
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Published</span>
+      <span class="sidebar-value">{{ item.publishDate }}</span>
+    </div>
+    {% endif %}
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Format</span>
+      <span class="sidebar-value">{{ item.format | capitalize }} · {{ item.type }}</span>
+    </div>
+    {% if item.wordCount %}
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Length</span>
+      <span class="sidebar-value">{{ item.wordCount | string }} words</span>
+    </div>
+    {% endif %}
+    {% if item.duration %}
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Duration</span>
+      <span class="sidebar-value">{{ item.duration }} minutes</span>
+    </div>
+    {% endif %}
+    <div class="sidebar-fact" style="border-bottom:none;padding-top:20px">
+      <a href="/content/" class="btn btn-secondary" style="width:100%;justify-content:center">All content</a>
+    </div>
+  </aside>
+
+</div>

@@ -1,0 +1,15 @@
+{
+  "key": "regenerative-finance",
+  "name": "Regenerative Finance",
+  "type": "practice",
+  "tagline": "Finance models that heal rather than extract.",
+  "description": "The Regenerative Finance practice node works on treasury architecture, revenue-sharing arrangements, token economies, and post-extractive financial instruments. Members collectively research, advise, and implement regenerative financial structures for organizations and coalitions.",
+  "status": "active",
+  "revenueShare": 10,
+  "members": [
+    {"key": "yaw-darko", "name": "Yaw Darko"}
+  ],
+  "orgs": [
+    {"key": "dark-matter-labs", "name": "Dark Matter Labs"}
+  ]
+}

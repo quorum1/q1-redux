@@ -1,0 +1,24 @@
+{
+  "key": "climate-coalition-treasury",
+  "name": "Treasury design for a multi-city climate coalition.",
+  "type": "project",
+  "status": "completed",
+  "isPublic": true,
+  "isExample": false,
+  "summary": "Seven organizations across four countries needed a shared treasury model that could hold grant funding, distribute to members, and remain auditable by funders. We delivered a full treasury architecture with supporting tooling in 8 weeks.",
+  "services": [
+    {"key": "regenerative-finance-design", "name": "Regenerative Finance Design"}
+  ],
+  "nodes": [
+    {"key": "regenerative-finance", "name": "Regenerative Finance"},
+    {"key": "european-union", "name": "European Union"}
+  ],
+  "members": [
+    {"key": "yaw-darko", "name": "Yaw Darko"}
+  ],
+  "orgs": [
+    {"key": "dark-matter-labs", "name": "Dark Matter Labs"}
+  ],
+  "dateCompleted": "2025-09",
+  "tags": ["treasury", "climate", "multi-stakeholder"]
+}

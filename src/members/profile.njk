@@ -1,0 +1,109 @@
+---
+pagination:
+  data: members
+  size: 1
+  alias: member
+permalink: "/@{{ member.key }}/"
+layout: layouts/page.njk
+---
+{% set title = member.name %}
+{% set description = member.role + ' — ' + site.title + ' member.' %}
+
+<div class="page-header">
+  <span class="eyebrow page-header-eyebrow" style="margin-bottom:12px">
+    <a href="/members/" style="color:var(--ink-mute);text-decoration:none">Members</a>
+    <span style="color:var(--ink-line)">/</span>
+    @{{ member.key }}
+  </span>
+  <div class="page-header-top">
+    <div>
+      <h1 class="page-title">{{ member.name }}</h1>
+      <p class="page-subtitle">{{ member.role }}</p>
+    </div>
+    <div class="page-header-actions">
+      <span class="badge badge-member">{{ member.memberType or "individual" }}</span>
+      <span class="badge badge-{{ member.status or 'active' }}">{{ member.status or "active" }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="profile-layout">
+
+  <div class="profile-main">
+
+    {% if member.bio %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">About</h2>
+      <p class="profile-bio">{{ member.bio }}</p>
+    </div>
+    {% endif %}
+
+    {% if member.practices and member.practices.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Practice nodes</h2>
+      <div class="chip-list">
+        {% for p in member.practices %}
+        <a href="/nodes/@{{ p.key }}/" class="chip">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-blue)" aria-hidden="true"></span>
+          {{ p.name }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if member.regions and member.regions.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Region nodes</h2>
+      <div class="chip-list">
+        {% for r in member.regions %}
+        <a href="/nodes/@{{ r.key }}/" class="chip">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+          {{ r.name }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if member.orgs and member.orgs.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Organizations</h2>
+      <div class="chip-list">
+        {% for o in member.orgs %}
+        <a href="/orgs/@{{ o.key }}/" class="chip">{{ o.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <aside class="profile-sidebar" aria-label="Member details">
+    {% if member.location %}
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Location</span>
+      <span class="sidebar-value">{{ member.location }}</span>
+    </div>
+    {% endif %}
+    {% if member.joinDate %}
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Member since</span>
+      <span class="sidebar-value">{{ member.joinDate }}</span>
+    </div>
+    {% endif %}
+    {% if member.links.website %}
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Website</span>
+      <span class="sidebar-value"><a href="{{ member.links.website }}" target="_blank" rel="noopener">{{ member.links.website | replace("https://", "") }}</a></span>
+    </div>
+    {% endif %}
+    <div class="sidebar-fact" style="border-bottom:none;padding-top:20px">
+      <a href="/join/" class="btn btn-secondary" style="width:100%;justify-content:center">
+        Join the network
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+    </div>
+  </aside>
+
+</div>

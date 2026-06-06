@@ -1,0 +1,21 @@
+{
+  "key": "hank-holiday",
+  "name": "Hank Holiday",
+  "role": "Founder & Network Architect",
+  "location": "San Francisco, CA",
+  "bio": "Hank Holiday is the founder of Quorum1 and has spent two decades at the intersection of organizational innovation, technology, and collective governance. He architected the meta-consultancy model that Quorum1 runs on, drawing from experience running regenerative organizations, building DAOs, and facilitating systems-change coalitions globally.",
+  "memberType": "individual",
+  "status": "active",
+  "joinDate": "2021-03",
+  "practices": [
+    {"key": "network-stewardship", "name": "Network Stewardship"},
+    {"key": "governance-design", "name": "Governance Design"}
+  ],
+  "regions": [
+    {"key": "north-america", "name": "North America"}
+  ],
+  "orgs": [],
+  "links": {
+    "website": "https://quorum.one"
+  }
+}

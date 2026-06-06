@@ -1,0 +1,25 @@
+{
+  "key": "commons-engine",
+  "name": "Commons Engine",
+  "type": "service-org",
+  "tagline": "Commons law & shared governance architecture.",
+  "description": "Commons Engine specializes in legal structures and governance frameworks for commons-based organizations, cooperatives, and multi-stakeholder collectives. They design the formal scaffolding that lets communities own and govern shared resources.",
+  "website": "https://commonsengine.org",
+  "joinDate": "2022-01",
+  "status": "active",
+  "practices": [
+    {"key": "commons-law", "name": "Commons Law"},
+    {"key": "governance-design", "name": "Governance Design"}
+  ],
+  "regions": [
+    {"key": "north-america", "name": "North America"},
+    {"key": "eu", "name": "European Union"}
+  ],
+  "services": [
+    {"key": "commons-law-advisory", "name": "Commons Law Advisory"},
+    {"key": "governance-architecture", "name": "Governance Architecture"}
+  ],
+  "members": [
+    {"key": "malia-fonoti", "name": "Malia Fonoti"}
+  ]
+}

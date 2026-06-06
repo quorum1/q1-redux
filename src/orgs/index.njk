@@ -1,0 +1,56 @@
+---
+layout: layouts/page.njk
+title: Orgs
+description: Member organizations woven into the Quorum1 meta-consultancy.
+---
+
+<div class="page-header">
+  <div class="page-header-top">
+    <div>
+      <span class="eyebrow page-header-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-yellow-deep)" aria-hidden="true"></span>
+        The network
+      </span>
+      <h1 class="page-title">Orgs.</h1>
+      <p class="page-subtitle">Service organizations, product studios, and research collectives — the organizational members of the Quorum1 meta-consultancy.</p>
+    </div>
+    <div class="page-header-actions">
+      <a href="/join/org/" class="btn btn-primary">
+        Join as an org
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="index-controls">
+  <div class="filter-tabs" role="tablist">
+    <button class="filter-tab active" data-filter="all">All orgs</button>
+    <button class="filter-tab" data-filter="service-org">Service orgs</button>
+    <button class="filter-tab" data-filter="product-org">Product orgs</button>
+  </div>
+  <span class="index-count">{{ orgs | length }} org{% if orgs | length != 1 %}s{% endif %}</span>
+</div>
+
+<div class="index-grid" id="orgs-grid">
+  {% for org in orgs %}
+  <a href="/orgs/@{{ org.key }}/" class="index-card" data-type="{{ org.type }}">
+    <div class="index-card-mono">{{ org.name | truncate(2, false, '') | upper }}</div>
+    <p class="index-card-name">{{ org.name }}</p>
+    <p class="index-card-tagline">{{ org.tagline }}</p>
+    {% if org.practices and org.practices.length %}
+    <div class="chip-list" style="margin-top:auto">
+      {% for p in org.practices %}
+      <span class="chip">{{ p.name }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="index-card-footer">
+      <span class="badge badge-{{ org.type or 'org' }}" style="font-size:10px">{{ org.type | replace("-", " ") }}</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-line)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+    </div>
+  </a>
+  {% else %}
+  <p style="color:var(--ink-mute);font-family:var(--font-body)">No orgs yet.</p>
+  {% endfor %}
+</div>

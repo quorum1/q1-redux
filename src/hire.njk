@@ -1,0 +1,93 @@
+---
+layout: layouts/home.njk
+title: Hire the Collective
+description: Tap into the Quorum1 meta-consultancy for your systems-change projects.
+---
+
+<section class="hero" style="padding-bottom:80px">
+  <div class="hero-grid section-inner">
+    <div class="hero-content">
+      <span class="eyebrow hero-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-blue)" aria-hidden="true"></span>
+        Hire us
+      </span>
+      <h1 class="hero-headline" style="font-size:clamp(36px,4.8vw,64px)">The Quorum1 meta-consultancy.</h1>
+      <p class="hero-lead">Tap into a global network of designers, technologists &amp; innovators. Frictionless access to the rarest &amp; hardest to find talent with no gatekeeping, no lock-in &amp; no restrictive contracts.</p>
+      <p class="hero-lead" style="margin-bottom:32px">Hire contractors, assemble flex teams, staff fractional roles, outsource operations or augment your existing team.</p>
+      <div class="hero-actions">
+        <a href="https://q1.is/signin" target="_blank" rel="noopener" class="btn btn-primary">
+          Chat with us
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+        <a href="/services/" class="btn btn-ghost">Browse all services</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <img src="/assets/images/mountain.svg" alt="" />
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper-soft);padding:80px 48px">
+  <div class="section-inner">
+    <div style="margin-bottom:48px">
+      <span class="eyebrow" style="margin-bottom:14px;display:inline-flex">What we offer</span>
+      <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin:0 0 10px">Service offerings.</h2>
+      <p style="font-family:var(--font-body);font-size:var(--fs-base);color:var(--ink-mute);margin:0;max-width:560px">From governance architecture to regenerative finance design, commons law, and beyond — the breadth of expertise in the Quorum1 network.</p>
+    </div>
+    <div class="service-cards-grid">
+      {% for service in services %}
+      <a href="/services/@{{ service.key }}/" style="text-decoration:none;display:flex;flex-direction:column;background:var(--paper-pure);border:1.5px solid var(--ink-line);padding:0;transition:border-color var(--dur-fast) var(--ease-std)" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--ink-line)'">
+        <div style="padding:24px 24px 0">
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:var(--fs-md);letter-spacing:-0.01em;color:var(--ink);margin:0 0 8px">{{ service.name }}</h3>
+          <p style="font-family:var(--font-body);font-size:var(--fs-sm);line-height:1.6;color:var(--ink-soft);margin:0 0 12px">{{ service.tagline }}</p>
+        </div>
+        <div style="margin-top:auto;padding:16px 24px;border-top:1px solid var(--ink-line);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-family:var(--font-display);font-size:11px;color:var(--ink-mute)">
+            {% for n in service.nodes %}{{ n.name }}{% if not loop.last %}, {% endif %}{% endfor %}
+          </span>
+          <span style="font-family:var(--font-display);font-weight:700;font-size:12px;color:var(--ink)">{{ service.costMin | costRange(service.costMax) }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div style="margin-top:32px;text-align:center">
+      <a href="/services/" class="btn btn-secondary">View all services</a>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper);padding:80px 48px">
+  <div class="section-inner">
+    <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin:0 0 10px">Example projects.</h2>
+    <p style="font-family:var(--font-body);font-size:var(--fs-base);color:var(--ink-mute);margin:0 0 32px;max-width:560px">Real and illustrative work from the Quorum1 network.</p>
+    <div class="example-cards-grid">
+      {% for project in projects | published %}
+      <a href="/projects/@{{ project.key }}/" style="text-decoration:none" class="example-card">
+        <span class="eyebrow example-card-eyebrow">{{ "Example" if project.isExample else "Client work" }}</span>
+        <h3 class="example-card-title">{{ project.name }}</h3>
+        <p class="example-card-body">{{ project.summary }}</p>
+        <div class="example-card-services">
+          {% for s in project.services %}
+          <span class="service-pill">{{ s.name }}</span>
+          {% endfor %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--ink);padding:80px 48px">
+  <div class="section-inner" style="max-width:640px">
+    <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.5vw,48px);line-height:1.08;letter-spacing:-0.025em;color:var(--paper-pure);margin:0 0 16px">Ready to start?</h2>
+    <p style="font-family:var(--font-body);font-size:var(--fs-md);line-height:1.5;color:var(--ink-faint);margin:0 0 32px">Tell us about your project. We'll match you with the best-aligned practitioners in the network and get back to you within two business days.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="https://q1.is/signin" target="_blank" rel="noopener" class="btn" style="background:var(--paper-pure);color:var(--ink);border-radius:0;font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:0.02em;padding:11px 20px;display:inline-flex;align-items:center;gap:8px;text-decoration:none">
+        Start a conversation
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+      <a href="/services/" class="btn btn-ink">Browse services</a>
+    </div>
+  </div>
+</section>

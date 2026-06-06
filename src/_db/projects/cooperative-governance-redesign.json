@@ -1,0 +1,25 @@
+{
+  "key": "cooperative-governance-redesign",
+  "name": "Governance redesign for a $40M cooperative.",
+  "type": "project",
+  "status": "completed",
+  "isPublic": true,
+  "isExample": false,
+  "summary": "A regional food cooperative with 12 member organizations needed a governance model that balanced central coordination with local autonomy. We assembled a three-practitioner team, ran a 6-week discovery sprint, and co-designed a new governance stack with member ratification built in.",
+  "services": [
+    {"key": "governance-architecture", "name": "Governance Architecture"},
+    {"key": "commons-law-advisory", "name": "Commons Law Advisory"}
+  ],
+  "nodes": [
+    {"key": "governance-design", "name": "Governance Design"},
+    {"key": "north-america", "name": "North America"}
+  ],
+  "members": [
+    {"key": "malia-fonoti", "name": "Malia Fonoti"}
+  ],
+  "orgs": [
+    {"key": "commons-engine", "name": "Commons Engine"}
+  ],
+  "dateCompleted": "2025-06",
+  "tags": ["governance", "cooperative", "commons-law"]
+}

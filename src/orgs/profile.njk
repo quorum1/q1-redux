@@ -1,0 +1,114 @@
+---
+pagination:
+  data: orgs
+  size: 1
+  alias: org
+permalink: "/orgs/@{{ org.key }}/"
+layout: layouts/page.njk
+---
+{% set title = org.name %}
+{% set description = org.tagline %}
+
+<div class="page-header">
+  <span class="eyebrow page-header-eyebrow" style="margin-bottom:12px">
+    <a href="/orgs/" style="color:var(--ink-mute);text-decoration:none">Orgs</a>
+    <span style="color:var(--ink-line)">/</span>
+    @{{ org.key }}
+  </span>
+  <div class="page-header-top">
+    <div>
+      <h1 class="page-title">{{ org.name }}</h1>
+      <p class="page-subtitle">{{ org.tagline }}</p>
+    </div>
+    <div class="page-header-actions">
+      <span class="badge badge-org">{{ org.type | replace("-", " ") }}</span>
+      <span class="badge badge-{{ org.status or 'active' }}">{{ org.status or "active" }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="profile-layout">
+
+  <div class="profile-main">
+
+    {% if org.description %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">About</h2>
+      <p class="profile-bio">{{ org.description }}</p>
+    </div>
+    {% endif %}
+
+    {% if org.services and org.services.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Services offered</h2>
+      <div class="chip-list">
+        {% for s in org.services %}
+        <a href="/services/@{{ s.key }}/" class="chip">{{ s.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if org.practices and org.practices.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Practice nodes</h2>
+      <div class="chip-list">
+        {% for p in org.practices %}
+        <a href="/nodes/@{{ p.key }}/" class="chip">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-blue)" aria-hidden="true"></span>
+          {{ p.name }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if org.regions and org.regions.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Region nodes</h2>
+      <div class="chip-list">
+        {% for r in org.regions %}
+        <a href="/nodes/@{{ r.key }}/" class="chip">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+          {{ r.name }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if org.members and org.members.length %}
+    <div class="profile-section">
+      <h2 class="profile-section-title">Members</h2>
+      <div class="chip-list">
+        {% for m in org.members %}
+        <a href="/@{{ m.key }}/" class="chip">{{ m.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <aside class="profile-sidebar" aria-label="Org details">
+    {% if org.joinDate %}
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Member since</span>
+      <span class="sidebar-value">{{ org.joinDate }}</span>
+    </div>
+    {% endif %}
+    {% if org.website %}
+    <div class="sidebar-fact">
+      <span class="sidebar-label">Website</span>
+      <span class="sidebar-value"><a href="{{ org.website }}" target="_blank" rel="noopener">{{ org.website | replace("https://", "") }}</a></span>
+    </div>
+    {% endif %}
+    <div class="sidebar-fact" style="border-bottom:none;padding-top:20px">
+      <a href="/hire/" class="btn btn-primary" style="width:100%;justify-content:center">
+        Hire this org
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+    </div>
+  </aside>
+
+</div>

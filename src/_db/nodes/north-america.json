@@ -1,0 +1,17 @@
+{
+  "key": "north-america",
+  "name": "North America",
+  "type": "region",
+  "tagline": "Routing systems-change work across the continent.",
+  "description": "The North America region node connects clients and projects across the US and Canada with the practitioners best positioned to serve them — prioritizing local knowledge, cultural fit, and timezone alignment. The node hosts regular member gatherings and maintains a shared regional CRM.",
+  "status": "active",
+  "revenueShare": 10,
+  "members": [
+    {"key": "hank-holiday", "name": "Hank Holiday"},
+    {"key": "malia-fonoti", "name": "Malia Fonoti"}
+  ],
+  "orgs": [
+    {"key": "commons-engine", "name": "Commons Engine"},
+    {"key": "other-internet", "name": "Other Internet"}
+  ]
+}

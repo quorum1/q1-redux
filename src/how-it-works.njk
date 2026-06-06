@@ -1,0 +1,82 @@
+---
+layout: layouts/home.njk
+title: How Quorum1 Works
+description: The node-based revenue model that keeps the Quorum1 meta-consultancy self-sustaining.
+---
+
+<section class="nodes" style="padding-top:80px">
+  <div class="nodes-grid">
+    <div>
+      <span class="eyebrow nodes-eyebrow">The model</span>
+      <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(32px,4vw,52px);line-height:1.06;letter-spacing:-0.025em;color:var(--ink);margin:0 0 20px">How Quorum1 works.</h1>
+      <p class="nodes-intro">Twenty percent of every Quorum1 project flows back to nodes — ten to a region node, ten to a practice node — funding the sales, marketing, and research that keep the collective self-sustaining.</p>
+      <div class="nodes-tabs" role="tablist">
+        <button class="nodes-tab active" role="tab" data-panel="practice">Practice nodes</button>
+        <button class="nodes-tab" role="tab" data-panel="region">Region nodes</button>
+      </div>
+    </div>
+    <div>
+      <div class="nodes-panel" id="panel-practice" role="tabpanel">
+        <span class="nodes-panel-dot" style="background:var(--q-blue)" aria-hidden="true"></span>
+        <span class="eyebrow nodes-panel-tagline">Communities of expertise.</span>
+        <h2 class="nodes-panel-title">Practice nodes</h2>
+        <p class="nodes-panel-body">Practice nodes are member-led collectives organized around a domain — governance design, regenerative finance, commons law, decentralized infrastructure, sense-making. Each node curates its own thought work, runs joint research, and receives 10% of every project routed through its practice.</p>
+        <div class="nodes-tags">
+          {% for node in nodes | filterByType("practice") %}
+          <a href="/nodes/@{{ node.key }}/" class="nodes-tag" style="text-decoration:none;color:inherit">
+            <span class="dot" style="width:6px;height:6px;background:var(--q-blue)" aria-hidden="true"></span>
+            {{ node.name }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="nodes-panel" id="panel-region" role="tabpanel" hidden>
+        <span class="nodes-panel-dot" style="background:var(--q-red)" aria-hidden="true"></span>
+        <span class="eyebrow nodes-panel-tagline">Geography is still real.</span>
+        <h2 class="nodes-panel-title">Region nodes</h2>
+        <p class="nodes-panel-body">Region nodes route work to practitioners on the ground — local language, local law, local trust. They host gatherings, brief inbound clients, and recycle 10% of project revenue into community sales &amp; marketing.</p>
+        <div class="nodes-tags">
+          {% for node in nodes | filterByType("region") %}
+          <a href="/nodes/@{{ node.key }}/" class="nodes-tag" style="text-decoration:none;color:inherit">
+            <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+            {{ node.name }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper-soft);padding:80px 48px">
+  <div class="section-inner">
+    <div style="max-width:var(--container);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px">
+      <div style="border-top:1.5px solid var(--ink);padding-top:24px">
+        <span style="font-family:var(--font-display);font-weight:900;font-size:var(--fs-5xl);line-height:1;letter-spacing:-0.03em;color:var(--ink);display:block;margin-bottom:8px">80<span style="color:var(--q-blue)">%</span></span>
+        <p style="font-family:var(--font-body);font-size:var(--fs-sm);color:var(--ink-soft);margin:0">of project revenue goes to the practitioners who did the work.</p>
+      </div>
+      <div style="border-top:1.5px solid var(--ink);padding-top:24px">
+        <span style="font-family:var(--font-display);font-weight:900;font-size:var(--fs-5xl);line-height:1;letter-spacing:-0.03em;color:var(--ink);display:block;margin-bottom:8px">10<span style="color:var(--q-red)">%</span></span>
+        <p style="font-family:var(--font-body);font-size:var(--fs-sm);color:var(--ink-soft);margin:0">to the region node that sourced or supported the project.</p>
+      </div>
+      <div style="border-top:1.5px solid var(--ink);padding-top:24px">
+        <span style="font-family:var(--font-display);font-weight:900;font-size:var(--fs-5xl);line-height:1;letter-spacing:-0.03em;color:var(--ink);display:block;margin-bottom:8px">10<span style="color:var(--q-yellow-deep)">%</span></span>
+        <p style="font-family:var(--font-body);font-size:var(--fs-sm);color:var(--ink-soft);margin:0">to the practice node that provided the domain expertise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper);padding:80px 48px">
+  <div class="section-inner" style="max-width:640px">
+    <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.1;letter-spacing:-0.02em;color:var(--ink);margin:0 0 16px">Want to found a node?</h2>
+    <p style="font-family:var(--font-body);font-size:var(--fs-base);line-height:1.65;color:var(--ink-soft);margin:0 0 24px">Practice and region nodes are founded by members who want to organize around a shared domain or geography. Nodes are self-governing, self-sustaining, and own their 10% share. Reach out to discuss what a node for your area might look like.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="https://q1.is/signin" target="_blank" rel="noopener" class="btn btn-primary">
+        Start the conversation
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+      <a href="/nodes/" class="btn btn-secondary">Browse existing nodes</a>
+    </div>
+  </div>
+</section>

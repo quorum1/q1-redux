@@ -1,0 +1,53 @@
+---
+layout: layouts/page.njk
+title: Services
+description: Service offerings from the Quorum1 meta-consultancy network.
+---
+
+<div class="page-header">
+  <div class="page-header-top">
+    <div>
+      <span class="eyebrow page-header-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-blue)" aria-hidden="true"></span>
+        What we offer
+      </span>
+      <h1 class="page-title">Services.</h1>
+      <p class="page-subtitle">A wide range of services from the Quorum1 network — from governance architecture and regenerative finance design to commons law, AI engineering, and org design.</p>
+    </div>
+    <div class="page-header-actions">
+      <a href="/hire/" class="btn btn-primary">
+        Brief us on a project
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="index-controls">
+  <span class="index-count">{{ services | length }} service{% if services | length != 1 %}s{% endif %}</span>
+</div>
+
+<div class="index-grid-wide">
+  {% for service in services %}
+  <a href="/services/@{{ service.key }}/" class="index-card">
+    <p class="index-card-name">{{ service.name }}</p>
+    <p class="index-card-tagline">{{ service.tagline }}</p>
+    {% if service.nodes and service.nodes.length %}
+    <div class="chip-list" style="margin-top:auto">
+      {% for n in service.nodes %}
+      <span class="chip">
+        <span class="dot" style="width:6px;height:6px;background:var(--q-blue)" aria-hidden="true"></span>
+        {{ n.name }}
+      </span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="index-card-footer">
+      <span class="index-card-meta" style="font-family:var(--font-display);font-weight:700;color:var(--ink)">{{ service.costMin | costRange(service.costMax, service.currency) }}</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-line)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+    </div>
+  </a>
+  {% else %}
+  <p style="color:var(--ink-mute);font-family:var(--font-body)">No services listed yet.</p>
+  {% endfor %}
+</div>

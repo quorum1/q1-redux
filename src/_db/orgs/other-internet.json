@@ -1,0 +1,19 @@
+{
+  "key": "other-internet",
+  "name": "Other Internet",
+  "type": "product-org",
+  "tagline": "Research at the intersection of technology & collective life.",
+  "description": "Other Internet is a research collective studying the ways technology shapes collective experience and governance. They produce research, tooling, and frameworks for communities operating in digital and physical commons.",
+  "website": "https://otherinter.net",
+  "joinDate": "2023-03",
+  "status": "active",
+  "practices": [
+    {"key": "sense-making", "name": "Sense-making"},
+    {"key": "network-stewardship", "name": "Network Stewardship"}
+  ],
+  "regions": [
+    {"key": "north-america", "name": "North America"}
+  ],
+  "services": [],
+  "members": []
+}

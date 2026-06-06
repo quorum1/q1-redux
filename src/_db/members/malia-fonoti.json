@@ -1,0 +1,22 @@
+{
+  "key": "malia-fonoti",
+  "name": "Malia Fonoti",
+  "role": "Governance Designer & Commons Law Practitioner",
+  "location": "Auckland, NZ",
+  "bio": "Malia Fonoti brings together commons law, indigenous governance frameworks, and organizational design to help communities build accountable, adaptive institutions. She has worked with cooperatives, land trusts, and digital commons organizations across the Pacific and internationally.",
+  "memberType": "individual",
+  "status": "active",
+  "joinDate": "2022-06",
+  "practices": [
+    {"key": "governance-design", "name": "Governance Design"},
+    {"key": "commons-law", "name": "Commons Law"}
+  ],
+  "regions": [
+    {"key": "pacific", "name": "Pacific"},
+    {"key": "north-america", "name": "North America"}
+  ],
+  "orgs": [
+    {"key": "commons-engine", "name": "Commons Engine"}
+  ],
+  "links": {}
+}

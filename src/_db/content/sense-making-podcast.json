@@ -1,0 +1,18 @@
+{
+  "key": "sense-making-podcast",
+  "title": "Sense-making at scale: how distributed networks stay coherent.",
+  "format": "audio",
+  "type": "podcast",
+  "wordCount": null,
+  "duration": 23,
+  "summary": "What holds a global coalition together when there's no central authority? This conversation explores the tools, rituals, and governance structures that help Quorum1 member networks maintain alignment across time zones, disciplines, and organizational cultures.",
+  "authors": [
+    {"key": "hank-holiday", "name": "Hank Holiday"}
+  ],
+  "authorOrgs": [
+    {"key": "other-internet", "name": "Other Internet"}
+  ],
+  "status": "published",
+  "publishDate": "2025-11-03",
+  "tags": ["sense-making", "network", "audio"]
+}

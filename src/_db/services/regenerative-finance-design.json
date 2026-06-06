@@ -1,0 +1,17 @@
+{
+  "key": "regenerative-finance-design",
+  "name": "Regenerative finance design.",
+  "tagline": "Model treasury structures and financial instruments that align incentives with long-term collective benefit.",
+  "description": "We work with organizations to design treasury structures, revenue-sharing arrangements, and financial instruments that don't extract from communities. Engagements cover model design, legal scaffolding, tooling selection, and operator training.",
+  "nodes": [
+    {"key": "regenerative-finance", "name": "Regenerative Finance"}
+  ],
+  "orgs": [
+    {"key": "dark-matter-labs", "name": "Dark Matter Labs"}
+  ],
+  "costMin": 8000,
+  "costMax": 25000,
+  "currency": "USD",
+  "status": "active",
+  "tags": ["finance", "treasury", "commons"]
+}

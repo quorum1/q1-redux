@@ -1,0 +1,49 @@
+---
+layout: layouts/page.njk
+title: Projects
+description: Real work and example projects from the Quorum1 meta-consultancy.
+---
+
+<div class="page-header">
+  <div class="page-header-top">
+    <div>
+      <span class="eyebrow page-header-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-blue)" aria-hidden="true"></span>
+        Our work
+      </span>
+      <h1 class="page-title">Projects.</h1>
+      <p class="page-subtitle">Real engagements and illustrative examples showing how Quorum1 puts systems-change expertise to work for client organizations.</p>
+    </div>
+    <div class="page-header-actions">
+      <a href="/hire/" class="btn btn-primary">
+        Start a project
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="index-controls" style="margin-bottom:32px">
+  <span class="index-count">{{ projects | length }} project{% if projects | length != 1 %}s{% endif %}</span>
+</div>
+
+<div class="index-list">
+  {% for project in projects %}
+  <a href="/projects/@{{ project.key }}/" class="index-list-item">
+    <div>
+      <p class="index-list-title">{{ project.name }}</p>
+      <p class="index-list-meta">
+        {% for n in project.nodes %}{{ n.name }}{% if not loop.last %} · {% endif %}{% endfor %}
+        {% if project.dateCompleted %} · {{ project.dateCompleted }}{% endif %}
+      </p>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px">
+      {% if project.isExample %}<span class="badge badge-org" style="font-size:10px">Example</span>{% endif %}
+      <span class="badge badge-{{ project.status }}" style="font-size:10px">{{ project.status }}</span>
+      <svg class="index-list-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+    </div>
+  </a>
+  {% else %}
+  <p style="color:var(--ink-mute);font-family:var(--font-body);padding:24px 0">No projects yet.</p>
+  {% endfor %}
+</div>

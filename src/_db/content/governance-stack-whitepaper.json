@@ -1,0 +1,18 @@
+{
+  "key": "governance-stack-whitepaper",
+  "title": "The governance stack: designing accountable organizations from first principles.",
+  "format": "written",
+  "type": "whitepaper",
+  "wordCount": 5700,
+  "duration": null,
+  "summary": "A framework for layering decision rights, resource flows, and accountability structures across networks of semi-autonomous teams — from DAO-adjacent structures to multi-stakeholder cooperatives. This paper argues for a modular approach to governance that can evolve with an organization's needs.",
+  "authors": [
+    {"key": "malia-fonoti", "name": "Malia Fonoti"}
+  ],
+  "authorOrgs": [
+    {"key": "commons-engine", "name": "Commons Engine"}
+  ],
+  "status": "published",
+  "publishDate": "2026-01-07",
+  "tags": ["governance", "commons", "systems-change"]
+}

@@ -1,0 +1,45 @@
+---
+pagination:
+  data: invites
+  size: 1
+  alias: invite
+permalink: "/i/{{ invite.code }}/"
+layout: layouts/_shell.njk
+---
+{% set title = "You're invited — " + site.title %}
+
+{% block body %}
+<div class="invite-page">
+  <div class="invite-card">
+
+    <div class="invite-chord brand-chord" aria-hidden="true">
+      <span class="dot" style="width:12px;height:12px;background:var(--q-red)"></span>
+      <span class="dot" style="width:12px;height:12px;background:var(--q-yellow)"></span>
+      <span class="dot" style="width:12px;height:12px;background:var(--q-blue)"></span>
+      <span class="dot" style="width:12px;height:12px;background:var(--ink)"></span>
+    </div>
+
+    <p style="font-family:var(--font-display);font-weight:600;font-size:var(--fs-xs);letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 16px">
+      Alpha invitation for {{ invite.entityName }}
+    </p>
+
+    <h1 class="invite-headline">You're invited to join quorum1.</h1>
+
+    <p class="invite-body">{{ invite.personalizedMessage }}</p>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <a href="/join/{% if invite.type == 'org' %}org{% else %}individual{% endif %}/?code={{ invite.code }}" class="btn btn-primary" style="justify-content:center">
+        Accept your invitation
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+      <a href="/" class="btn btn-secondary" style="justify-content:center">Learn more about Quorum1</a>
+    </div>
+
+    <p class="invite-meta">
+      This invitation expires {{ invite.expiresAt }}.
+      Invitation code: <code style="font-family:var(--font-mono);font-size:11px">{{ invite.code }}</code>
+    </p>
+
+  </div>
+</div>
+{% endblock %}

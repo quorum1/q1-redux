@@ -1,0 +1,18 @@
+{
+  "key": "building-regenerative-commons-talk",
+  "title": "Building regenerative commons in a post-extractive economy.",
+  "format": "video",
+  "type": "talk",
+  "wordCount": null,
+  "duration": 38,
+  "summary": "Recorded at the Network Futures Summit, this talk maps the transition from extractive business models to regenerative commons-based architectures, with case studies from three Quorum1 member engagements across three continents.",
+  "authors": [
+    {"key": "yaw-darko", "name": "Yaw Darko"}
+  ],
+  "authorOrgs": [
+    {"key": "dark-matter-labs", "name": "Dark Matter Labs"}
+  ],
+  "status": "published",
+  "publishDate": "2025-12-14",
+  "tags": ["regenerative", "commons", "video"]
+}

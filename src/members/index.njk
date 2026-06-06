@@ -1,0 +1,55 @@
+---
+layout: layouts/page.njk
+title: Members
+description: The individual practitioners woven into the Quorum1 meta-consultancy.
+---
+
+<div class="page-header">
+  <div class="page-header-top">
+    <div>
+      <span class="eyebrow page-header-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-blue)" aria-hidden="true"></span>
+        The network
+      </span>
+      <h1 class="page-title">Members.</h1>
+      <p class="page-subtitle">Individual practitioners at the frontier of systems change — governance designers, regenerative finance researchers, commons lawyers, sense-makers, and more.</p>
+    </div>
+    <div class="page-header-actions">
+      <a href="/join/individual/" class="btn btn-primary">
+        Join as a member
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="index-controls">
+  <div class="filter-tabs" role="tablist" aria-label="Filter members">
+    <button class="filter-tab active" data-filter="all">All members</button>
+    <button class="filter-tab" data-filter="individual">Individuals</button>
+  </div>
+  <span class="index-count">{{ members | length }} member{% if members | length != 1 %}s{% endif %}</span>
+</div>
+
+<div class="index-grid" id="members-grid">
+  {% for member in members %}
+  <a href="/@{{ member.key }}/" class="index-card">
+    <div class="index-card-mono">{{ member.name | truncate(2, false, '') | upper }}</div>
+    <p class="index-card-name">{{ member.name }}</p>
+    <p class="index-card-tagline">{{ member.role }}</p>
+    {% if member.practices and member.practices.length %}
+    <div class="chip-list" style="margin-top:auto">
+      {% for p in member.practices %}
+      <span class="chip">{{ p.name }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="index-card-footer">
+      <span class="index-card-meta">{{ member.location }}</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-line)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+    </div>
+  </a>
+  {% else %}
+  <p style="color:var(--ink-mute);font-family:var(--font-body)">No members yet.</p>
+  {% endfor %}
+</div>

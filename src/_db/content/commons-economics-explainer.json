@@ -1,0 +1,16 @@
+{
+  "key": "commons-economics-explainer",
+  "title": "Commons economics: a primer for organizational leaders.",
+  "format": "written",
+  "type": "article",
+  "wordCount": 2400,
+  "duration": null,
+  "summary": "An accessible introduction to commons-based economic models for leaders of organizations who are curious about moving beyond extractive capitalism. Covers the basics of shared resources, governance, and the evidence base for commons-based approaches.",
+  "authors": [
+    {"key": "malia-fonoti", "name": "Malia Fonoti"}
+  ],
+  "authorOrgs": [],
+  "status": "published",
+  "publishDate": "2025-10-22",
+  "tags": ["commons", "economics", "explainer"]
+}

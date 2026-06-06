@@ -1,0 +1,13 @@
+{
+  "key": "european-union",
+  "name": "European Union",
+  "type": "region",
+  "tagline": "Systems change rooted in European commons & policy.",
+  "description": "The EU region node bridges Quorum1's global network with the rich ecosystem of European cooperatives, commons-based organizations, and policy innovation. It serves clients navigating EU law, coordinates with Brussels-based policy practitioners, and hosts European member convenings.",
+  "status": "active",
+  "revenueShare": 10,
+  "members": [],
+  "orgs": [
+    {"key": "dark-matter-labs", "name": "Dark Matter Labs"}
+  ]
+}

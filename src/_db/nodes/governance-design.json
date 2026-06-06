@@ -1,0 +1,16 @@
+{
+  "key": "governance-design",
+  "name": "Governance Design",
+  "type": "practice",
+  "tagline": "Communities of expertise in governance design.",
+  "description": "The Governance Design practice node brings together practitioners working on decision-making structures, accountability frameworks, and shared-governance models for organizations of all kinds — from worker cooperatives to global coalitions.",
+  "status": "active",
+  "revenueShare": 10,
+  "members": [
+    {"key": "hank-holiday", "name": "Hank Holiday"},
+    {"key": "malia-fonoti", "name": "Malia Fonoti"}
+  ],
+  "orgs": [
+    {"key": "commons-engine", "name": "Commons Engine"}
+  ]
+}

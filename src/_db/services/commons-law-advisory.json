@@ -1,0 +1,17 @@
+{
+  "key": "commons-law-advisory",
+  "name": "Commons law & legal structure.",
+  "tagline": "Navigate novel entity structures and commons-based legal architectures.",
+  "description": "We help organizations choose and implement the legal structures that match their governance intentions — cooperative law, multi-stakeholder agreements, shared IP frameworks, and novel entity structures built for collective ownership. Practitioners who've built these structures from scratch, not just advised on them.",
+  "nodes": [
+    {"key": "commons-law", "name": "Commons Law"}
+  ],
+  "orgs": [
+    {"key": "commons-engine", "name": "Commons Engine"}
+  ],
+  "costMin": 5000,
+  "costMax": 15000,
+  "currency": "USD",
+  "status": "active",
+  "tags": ["legal", "commons", "cooperative-law"]
+}

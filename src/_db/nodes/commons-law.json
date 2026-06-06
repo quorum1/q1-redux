@@ -1,0 +1,15 @@
+{
+  "key": "commons-law",
+  "name": "Commons Law",
+  "type": "practice",
+  "tagline": "Legal architecture for shared resources.",
+  "description": "The Commons Law practice node specializes in the legal scaffolding for commons-based organizations: cooperative law, shared IP frameworks, multi-stakeholder agreements, and novel entity structures that support collective ownership and governance.",
+  "status": "active",
+  "revenueShare": 10,
+  "members": [
+    {"key": "malia-fonoti", "name": "Malia Fonoti"}
+  ],
+  "orgs": [
+    {"key": "commons-engine", "name": "Commons Engine"}
+  ]
+}

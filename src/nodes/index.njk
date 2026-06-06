@@ -1,0 +1,69 @@
+---
+layout: layouts/page.njk
+title: Nodes
+description: Practice and region nodes — the self-organizing collective intelligence of Quorum1.
+---
+
+<div class="page-header">
+  <div class="page-header-top">
+    <div>
+      <span class="eyebrow page-header-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-red)" aria-hidden="true"></span>
+        How we organize
+      </span>
+      <h1 class="page-title">Nodes.</h1>
+      <p class="page-subtitle">Practice nodes organize around professional domains. Region nodes organize around geography. Together they route 20% of every Quorum1 project back into the collective.</p>
+    </div>
+    <div class="page-header-actions">
+      <a href="/nodes/create/" class="btn btn-secondary">Found a node</a>
+      <a href="/how-it-works/" class="btn btn-ghost">How it works</a>
+    </div>
+  </div>
+</div>
+
+{% set practiceNodes = nodes | filterByType("practice") %}
+{% set regionNodes = nodes | filterByType("region") %}
+
+{% if practiceNodes.length %}
+<div style="margin-bottom:48px">
+  <h2 style="font-family:var(--font-display);font-weight:700;font-size:var(--fs-sm);letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid var(--ink-line)">Practice nodes — {{ practiceNodes | length }}</h2>
+  <div class="index-grid">
+    {% for node in practiceNodes %}
+    <a href="/nodes/@{{ node.key }}/" class="index-card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+        <span class="dot" style="width:10px;height:10px;background:var(--q-blue)" aria-hidden="true"></span>
+        <span class="badge badge-practice" style="font-size:10px">Practice</span>
+      </div>
+      <p class="index-card-name">{{ node.name }}</p>
+      <p class="index-card-tagline">{{ node.tagline }}</p>
+      <div class="index-card-footer">
+        <span class="index-card-meta">{{ node.members | length }} member{% if node.members | length != 1 %}s{% endif %} · {{ node.revenueShare }}% revenue share</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-line)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if regionNodes.length %}
+<div>
+  <h2 style="font-family:var(--font-display);font-weight:700;font-size:var(--fs-sm);letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid var(--ink-line)">Region nodes — {{ regionNodes | length }}</h2>
+  <div class="index-grid">
+    {% for node in regionNodes %}
+    <a href="/nodes/@{{ node.key }}/" class="index-card">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+        <span class="dot" style="width:10px;height:10px;background:var(--q-red)" aria-hidden="true"></span>
+        <span class="badge badge-region" style="font-size:10px">Region</span>
+      </div>
+      <p class="index-card-name">{{ node.name }}</p>
+      <p class="index-card-tagline">{{ node.tagline }}</p>
+      <div class="index-card-footer">
+        <span class="index-card-meta">{{ node.members | length }} member{% if node.members | length != 1 %}s{% endif %} · {{ node.revenueShare }}% revenue share</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-line)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

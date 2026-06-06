@@ -1,0 +1,22 @@
+{
+  "key": "network-sense-making-platform",
+  "name": "Sense-making infrastructure for a global commons network.",
+  "type": "example",
+  "status": "completed",
+  "isPublic": true,
+  "isExample": true,
+  "summary": "An example project illustrating how Quorum1 helps distributed networks build sense-making infrastructure — the shared knowledge systems, decision protocols, and communication practices that keep geographically dispersed coalitions coherent and adaptive.",
+  "services": [],
+  "nodes": [
+    {"key": "governance-design", "name": "Governance Design"},
+    {"key": "north-america", "name": "North America"}
+  ],
+  "members": [
+    {"key": "hank-holiday", "name": "Hank Holiday"}
+  ],
+  "orgs": [
+    {"key": "other-internet", "name": "Other Internet"}
+  ],
+  "dateCompleted": "2025-11",
+  "tags": ["sense-making", "infrastructure", "network"]
+}
