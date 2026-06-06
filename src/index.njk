@@ -2,37 +2,30 @@
 layout: layouts/home.njk
 ---
 
-<!-- ─── Hero ──────────────────────────────────────────────────────────────── -->
+{% set arrowSvg %}
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+{% endset %}
+
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 1 — BANNER
+     ══════════════════════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-grid section-inner">
 
     <div class="hero-content">
-      <span class="eyebrow hero-eyebrow">
-        <span class="dot" style="width:8px;height:8px;background:var(--q-red)" aria-hidden="true"></span>
-        The world's first meta-consultancy
-      </span>
       <h1 class="hero-headline">
-        You envision new ways of working <span class="amp">&amp;</span> organizing.<br>
-        We help you make them real.
+        <em>You</em> envision new ways of working <span class="amp">&amp;</span> organizing.<br>
+        <em>We</em> help you make them real.
       </h1>
-      <p class="hero-lead">
-        Quorum1 is the connective tissue for a global community of systems&#8209;change
-        organizations. One front door. Many of the best minds. All the right work.
+      <h2 class="hero-subhead">
+        Quorum1 is the world's first meta-consultancy woven from the leading minds in systems change.
+      </h2>
+      <p class="hero-body">
+        Quorum1 is your gateway to the most inspiring org innovators in the world. From novel entity structures &amp; shared treasuries to collective sense-making &amp; regenerative social architectures&hellip;
       </p>
-      <div class="hero-actions">
-        <a href="/hire/" class="btn btn-primary">
-          Find a partner
-          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
-          </svg>
-        </a>
-        <a href="/manifesto/" class="btn btn-ghost">
-          Read our manifesto
-          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
-          </svg>
-        </a>
-      </div>
+      <p class="hero-welcome">
+        Whether you want to hire, partner, white-label, or just learn &mdash; welcome to quorum1.
+      </p>
     </div>
 
     <div class="hero-visual" aria-hidden="true">
@@ -42,151 +35,599 @@ layout: layouts/home.njk
   </div>
 </section>
 
-<!-- ─── Logo Cloud ────────────────────────────────────────────────────────── -->
-<section class="logo-cloud">
-  <div class="logo-cloud-inner">
-    <span class="eyebrow logo-cloud-label">
-      <span class="dot" style="width:8px;height:8px;background:var(--q-yellow)" aria-hidden="true"></span>
-      Woven from
-    </span>
-    <div class="logo-cloud-grid" aria-label="Member organizations">
-      <div class="logo-tile" title="Restate Foundation">RF</div>
-      <div class="logo-tile" title="Hypha">HY</div>
-      <div class="logo-tile" title="Commons Engine">CE</div>
-      <div class="logo-tile" title="Regen Network">RN</div>
-      <div class="logo-tile" title="Dark Matter Labs">DM</div>
-      <div class="logo-tile" title="BlockScience">BS</div>
-      <div class="logo-tile" title="Other Internet">OI</div>
-      <div class="logo-tile" title="Edgeryders">ER</div>
-    </div>
-    <span class="logo-cloud-more">+ 64 more</span>
-  </div>
-</section>
-
-<!-- ─── What We Do ───────────────────────────────────────────────────────── -->
-<section class="what-we-do">
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 2 — NAV LINKS
+     ══════════════════════════════════════════════════════════════ -->
+<section class="nav-cards-section">
   <div class="section-inner">
 
-    <div class="wwd-header">
-      <div>
-        <span class="eyebrow wwd-eyebrow">What we do</span>
-        <h2 class="wwd-title">We weave member expertise into one trusted, future&#8209;ready collective.</h2>
-      </div>
-      <div class="brand-chord" aria-hidden="true">
-        <span class="dot" style="width:14px;height:14px;background:var(--q-red)"></span>
-        <span class="dot" style="width:14px;height:14px;background:var(--q-yellow)"></span>
-        <span class="dot" style="width:14px;height:14px;background:var(--q-blue)"></span>
-        <span class="dot" style="width:14px;height:14px;background:var(--ink)"></span>
-      </div>
-    </div>
+    <div class="nav-cards-grid">
 
-    <div class="wwd-grid">
-
-      <article class="wwd-card">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--q-red)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"/>
-          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
-        </svg>
-        <span class="eyebrow wwd-card-eyebrow">For client orgs</span>
-        <h3 class="wwd-card-title">One front door.</h3>
-        <p class="wwd-card-body">Brief us once. We route your project to the best-aligned practitioners in the network — governance, regenerative design, commons law, technical implementation.</p>
-        <a href="/hire/" class="wwd-card-cta">
-          Tell us about a project
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+      <!-- Hire Us -->
+      <a href="/hire/" class="nav-card">
+        <div class="nav-card-icon" style="color:var(--q-blue)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12.01" y2="12"/>
           </svg>
-        </a>
-      </article>
+        </div>
+        <h3 class="nav-card-title">Hire us.</h3>
+        <p class="nav-card-body">Put our meta-consultancy to work. Hire contractors, flex teams, fractional roles, staff aug &amp; more.</p>
+        <span class="nav-card-cta">Browse service offerings {{ arrowSvg | safe }}</span>
+      </a>
 
-      <article class="wwd-card">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--q-yellow-deep)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-          <circle cx="9" cy="7" r="4"/>
-          <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-        </svg>
-        <span class="eyebrow wwd-card-eyebrow">For member firms</span>
-        <h3 class="wwd-card-title">Punch above your weight.</h3>
-        <p class="wwd-card-body">Solo consultancy? Boutique studio? Plug into a shared brand halo and a steady lead pipeline. Keep your independence; gain the leverage of a 70-person team.</p>
-        <a href="/join/" class="wwd-card-cta">
-          Apply to join
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+      <!-- Co-run the Commons -->
+      <a href="/partnership/" class="nav-card">
+        <div class="nav-card-icon" style="color:var(--q-yellow-deep)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
           </svg>
-        </a>
-      </article>
+        </div>
+        <h3 class="nav-card-title">Co-run the commons.</h3>
+        <p class="nav-card-body">Running an emergent collective? We can co-design, white label, joint venture &amp; more.</p>
+        <span class="nav-card-cta">Explore partnership {{ arrowSvg | safe }}</span>
+      </a>
 
-      <article class="wwd-card">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--q-blue)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="5" r="2"/>
-          <circle cx="5" cy="19" r="2"/>
-          <circle cx="19" cy="19" r="2"/>
-          <line x1="12" y1="7" x2="12" y2="13"/>
-          <line x1="12" y1="13" x2="6.5" y2="17.5"/>
-          <line x1="12" y1="13" x2="17.5" y2="17.5"/>
-        </svg>
-        <span class="eyebrow wwd-card-eyebrow">For the movement</span>
-        <h3 class="wwd-card-title">Compete collectively.</h3>
-        <p class="wwd-card-body">Region and practice nodes pool revenue to fund sales, marketing, and research that no single member could afford alone. Twenty percent of every project flows back.</p>
-        <a href="/practices/" class="wwd-card-cta">
-          How nodes work
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+      <!-- Join as an Individual -->
+      <a href="/join/individual/" class="nav-card">
+        <div class="nav-card-icon" style="color:var(--q-red)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
           </svg>
-        </a>
-      </article>
+        </div>
+        <h3 class="nav-card-title">Join as an individual.</h3>
+        <p class="nav-card-body">Are you fired up about new forms of business &amp; governance? Quorum1 is your home, welcome!</p>
+        <span class="nav-card-cta">Become a member {{ arrowSvg | safe }}</span>
+      </a>
+
+      <!-- Join as an Org -->
+      <a href="/join/org/" class="nav-card">
+        <div class="nav-card-icon" style="color:var(--q-blue)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="9" width="18" height="13"/><path d="M8 22V12h8v10"/><path d="M3 9l9-7 9 7"/>
+          </svg>
+        </div>
+        <h3 class="nav-card-title">Join as an org.</h3>
+        <p class="nav-card-body">Does your org's work involve org innovation or systems change? Quorum1 is your home, welcome!</p>
+        <span class="nav-card-cta">Weave into the network {{ arrowSvg | safe }}</span>
+      </a>
+
+      <!-- Found a Node -->
+      <a href="/nodes/" class="nav-card">
+        <div class="nav-card-icon" style="color:var(--q-yellow-deep)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="7" x2="12" y2="13"/><line x1="12" y1="13" x2="6.5" y2="17.5"/><line x1="12" y1="13" x2="17.5" y2="17.5"/>
+          </svg>
+        </div>
+        <h3 class="nav-card-title">Found a node.</h3>
+        <p class="nav-card-body">Want to help organize a guild of service providers around a particular region or professional practice area?</p>
+        <span class="nav-card-cta">Learn how nodes work {{ arrowSvg | safe }}</span>
+      </a>
+
+      <!-- Get Inspired -->
+      <a href="/thought-work/" class="nav-card">
+        <div class="nav-card-icon" style="color:var(--q-red)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+          </svg>
+        </div>
+        <h3 class="nav-card-title">Get inspired.</h3>
+        <p class="nav-card-body">Interested in ideas, frameworks &amp; tools from the cutting edge of organizational innovation?</p>
+        <span class="nav-card-cta">Explore our thought work {{ arrowSvg | safe }}</span>
+      </a>
 
     </div>
   </div>
 </section>
 
-<!-- ─── Manifesto ─────────────────────────────────────────────────────────── -->
-<section class="manifesto">
-  <div class="manifesto-grid">
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 3 — CREDENTIALIZING
+     ══════════════════════════════════════════════════════════════ -->
+<section class="credentializing">
+  <div class="credentializing-inner">
 
     <div>
-      <span class="eyebrow manifesto-eyebrow" style="color:var(--q-yellow)">
-        <span class="dot" style="width:8px;height:8px;background:var(--q-yellow)" aria-hidden="true"></span>
-        Manifesto &middot; 01
+      <h2 class="cred-headline">As an ecomimetic org we are pioneering new ways to organize work while making our business model available to the global commons.</h2>
+      <p class="cred-body">With a core network of <strong>over 600 professionals</strong> globally and an approach rooted in <strong>two decades</strong> of research &amp; experimentation, we are deeply connected to the past, present and future of business.</p>
+      <p class="cred-body" style="margin-bottom:0"><strong>Quorum1 helps turn visionary organizational designs into operational reality</strong> by assembling &amp; operating diverse teams of innovators &amp; global thought leaders. We help build the future because we are the future &mdash; from our entity structure to our daily operations.</p>
+    </div>
+
+    <div class="cred-stats">
+      <div class="cred-stat">
+        <span class="cred-stat-number">600<span style="color:var(--q-red)">+</span></span>
+        <span class="cred-stat-label">professionals in the global network</span>
+      </div>
+      <div class="cred-stat">
+        <span class="cred-stat-number">20<span style="color:var(--q-red)">yr</span></span>
+        <span class="cred-stat-label">of research &amp; experimentation</span>
+      </div>
+      <div class="cred-stat">
+        <span class="cred-stat-number">40<span style="color:var(--q-red)">+</span></span>
+        <span class="cred-stat-label">member organizations worldwide</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 4 — CONTENT / THOUGHT WORK
+     ══════════════════════════════════════════════════════════════ -->
+<section class="thought-work">
+  <div class="section-inner">
+
+    <div class="tw-header">
+      <span class="eyebrow tw-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-blue)" aria-hidden="true"></span>
+        Thought work
       </span>
-      <div class="brand-chord" aria-hidden="true" style="margin-top:20px">
-        <span class="dot" style="width:16px;height:16px;background:var(--q-red)"></span>
-        <span class="dot" style="width:16px;height:16px;background:var(--q-yellow)"></span>
-        <span class="dot" style="width:16px;height:16px;background:var(--q-blue)"></span>
-        <span class="dot" style="width:16px;height:16px;background:var(--paper-pure)"></span>
-      </div>
+      <h2 class="tw-title">Explore the future of organizational innovation.</h2>
+      <p class="tw-subtitle">Quorum1 is a global network woven from the leading minds in systems change. Browse through the thought work of our member individuals &amp; orgs.</p>
     </div>
 
-    <div>
-      <p class="manifesto-quote">
-        <span class="highlight">What comes next,</span> already exists.
-        It is being built, quietly, by the most aligned organizations in the world —
-        scattered across nodes, working under different names, on overlapping projects,
-        with no shared front door.
-      </p>
-      <p class="manifesto-body">
-        Quorum1 is that front door. We aggregate, amplify, and activate the work of
-        regenerative, commons&#8209;based, and systems&#8209;change organizations — reducing
-        friction in biz dev, sales, and partnerships so their ideas can reach the
-        clients and projects that need them most.
-      </p>
+    <div class="filter-bar">
+      <div class="filter-tabs" role="tablist" aria-label="Content type filter">
+        <button class="filter-tab active" role="tab" data-filter="all">All content</button>
+        <button class="filter-tab" role="tab" data-filter="written">Only written</button>
+        <button class="filter-tab" role="tab" data-filter="video">Only video</button>
+        <button class="filter-tab" role="tab" data-filter="audio">Only audio</button>
+      </div>
+      <label class="filter-toggle" aria-label="Include unpublished work">
+        <span class="toggle-switch" id="unpublished-toggle" role="switch" aria-checked="false" tabindex="0"></span>
+        Include unpublished work
+      </label>
+    </div>
+
+    <div class="content-cards-grid" id="content-cards">
+
+      <!-- Written card -->
+      <article class="content-card" data-format="written">
+        <div class="content-card-image" style="background:var(--paper-deep)">
+          <div class="content-card-image-inner">
+            <span class="dot" style="width:56px;height:56px;background:var(--q-red);opacity:0.15" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="content-card-body">
+          <span class="content-card-format">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            5,700 word whitepaper
+          </span>
+          <h3 class="content-card-title">The governance stack: designing accountable organizations from first principles.</h3>
+          <p class="content-card-summary">A framework for layering decision rights, resource flows, and accountability structures across networks of semi-autonomous teams &mdash; from DAO-adjacent structures to multi-stakeholder cooperatives.</p>
+          <div class="content-card-meta">
+            <span class="content-card-byline">By <a href="#">Malia Fonoti</a>, <a href="#">Commons Engine</a></span>
+            <span class="content-card-status">Published Jan 7, 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Video card -->
+      <article class="content-card" data-format="video">
+        <div class="content-card-image" style="background:var(--ink)">
+          <div class="content-card-image-inner" style="position:relative">
+            <span class="dot" style="width:48px;height:48px;background:var(--q-blue);opacity:0.2;position:absolute" aria-hidden="true"></span>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--paper-pure)" stroke="none" aria-hidden="true" style="position:relative;z-index:1;opacity:0.6"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+        <div class="content-card-body">
+          <span class="content-card-format">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="0"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+            38 minute talk
+          </span>
+          <h3 class="content-card-title">Building regenerative commons in a post-extractive economy.</h3>
+          <p class="content-card-summary">Recorded at the Network Futures Summit, this talk maps the transition from extractive business models to regenerative commons-based architectures, with case studies from three Quorum1 member engagements.</p>
+          <div class="content-card-meta">
+            <span class="content-card-byline">By <a href="#">Yaw Darko</a>, <a href="#">Dark Matter Labs</a></span>
+            <span class="content-card-status">Published Dec 14, 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Audio card -->
+      <article class="content-card" data-format="audio">
+        <div class="content-card-image" style="background:var(--paper-deep)">
+          <div class="content-card-image-inner">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--q-yellow-deep)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          </div>
+        </div>
+        <div class="content-card-body">
+          <span class="content-card-format">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            23 minute podcast
+          </span>
+          <h3 class="content-card-title">Sense-making at scale: how distributed networks stay coherent.</h3>
+          <p class="content-card-summary">What holds a global coalition together when there's no central authority? This conversation explores the tools, rituals, and governance structures that help Quorum1 member networks maintain alignment across time zones and disciplines.</p>
+          <div class="content-card-meta">
+            <span class="content-card-byline">By <a href="#">Seo-yeon Park</a>, <a href="#">Other Internet</a></span>
+            <span class="content-card-status">Published Nov 3, 2025</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="margin-top:32px;text-align:center">
+      <a href="/thought-work/" class="btn btn-secondary">
+        Browse all thought work
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
     </div>
 
   </div>
 </section>
 
-<!-- ─── Nodes Section ────────────────────────────────────────────────────── -->
-<section class="nodes">
-  <div class="nodes-grid section-inner">
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 5 — HIRE US
+     ══════════════════════════════════════════════════════════════ -->
+<section class="hire-us" id="hire">
+  <div class="hire-header">
+    <div>
+      <span class="eyebrow hire-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-blue)" aria-hidden="true"></span>
+        Hire us
+      </span>
+      <h2 class="hire-title">The Quorum1 meta-consultancy.</h2>
+    </div>
+    <div>
+      <p class="hire-body">Tap into a global network of designers, technologists &amp; innovators. Quorum1 gives you frictionless access to the rarest &amp; hardest to find talent with no gatekeeping, no lock-in &amp; no restrictive contracts.</p>
+      <p class="hire-body">Hire contractors, assemble flex teams, staff fractional roles, outsource operations or augment your existing team.</p>
+      <p class="hire-subtext">What's a meta-consultancy? A globally distributed coalition of boutique agencies &amp; independent professionals weaving together into a hyper-agile super group.</p>
+      <a href="/chat/" class="btn btn-primary">
+        Chat with the sales bot
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Service offerings -->
+  <div class="hire-subsection">
+    <h3 class="hire-subsection-label">Service offerings.</h3>
+    <p style="font-family:var(--font-body);font-size:var(--fs-sm);color:var(--ink-mute);margin:0 0 24px;max-width:640px">We provide a wide range of services. From bookkeeping to MVP product development to AI engineering to org design and beyond.</p>
+    <div class="service-cards-grid">
+
+      <div class="service-card">
+        <div class="service-card-image">
+          <span class="dot" style="width:40px;height:40px;background:var(--q-blue);opacity:0.2" aria-hidden="true"></span>
+        </div>
+        <div class="service-card-body">
+          <h4 class="service-card-title">Governance architecture.</h4>
+          <p class="service-card-summary">Design decision-making structures, accountability frameworks, and shared-governance models for your organization or coalition.</p>
+          <div class="service-card-meta">
+            <span class="service-card-nodes">Via <a href="#">Governance Design</a></span>
+            <span class="service-card-cost">$15K–$50K</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-image">
+          <span class="dot" style="width:40px;height:40px;background:var(--q-yellow);opacity:0.3" aria-hidden="true"></span>
+        </div>
+        <div class="service-card-body">
+          <h4 class="service-card-title">Regenerative finance design.</h4>
+          <p class="service-card-summary">Model treasury structures, token economies, and revenue-sharing arrangements that align incentives with long-term collective benefit.</p>
+          <div class="service-card-meta">
+            <span class="service-card-nodes">Via <a href="#">Regenerative Finance</a></span>
+            <span class="service-card-cost">$8K–$25K</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-card-image">
+          <span class="dot" style="width:40px;height:40px;background:var(--q-red);opacity:0.2" aria-hidden="true"></span>
+        </div>
+        <div class="service-card-body">
+          <h4 class="service-card-title">Commons law &amp; legal structure.</h4>
+          <p class="service-card-summary">Navigate novel entity structures, multi-stakeholder agreements, and commons-based legal architectures with practitioners who've built them.</p>
+          <div class="service-card-meta">
+            <span class="service-card-nodes">Via <a href="#">Commons Law</a></span>
+            <span class="service-card-cost">$5K–$15K</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Example projects -->
+  <div class="hire-subsection">
+    <h3 class="hire-subsection-label">Example projects.</h3>
+    <div class="example-cards-grid">
+
+      <div class="example-card">
+        <span class="eyebrow example-card-eyebrow">Client work</span>
+        <h4 class="example-card-title">Redesigning a $40M cooperative's governance structure.</h4>
+        <p class="example-card-body">A regional food cooperative with 12 member orgs needed a governance model that balanced central coordination with local autonomy. We assembled a three-practitioner team, ran a 6-week discovery sprint, and co-designed a new governance stack with member ratification built in.</p>
+        <div class="example-card-services">
+          <span class="service-pill">Governance Architecture</span>
+          <span class="service-pill">Facilitation</span>
+          <span class="service-pill">Legal Structure</span>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <span class="eyebrow example-card-eyebrow">Client work</span>
+        <h4 class="example-card-title">Treasury design for a multi-city climate coalition.</h4>
+        <p class="example-card-body">Seven organizations across four countries needed a shared treasury model that could hold grant funding, distribute to members, and remain auditable by funders. We delivered a full treasury architecture with supporting tooling in 8 weeks.</p>
+        <div class="example-card-services">
+          <span class="service-pill">Regenerative Finance</span>
+          <span class="service-pill">Treasury Ops</span>
+          <span class="service-pill">Tooling</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Regional nodes -->
+  <div class="regional-nodes">
+    <h3 class="hire-subsection-label" style="margin-bottom:16px">Regional nodes.</h3>
+    <div class="regional-nodes-list">
+      <div class="regional-node-item">
+        <a href="/nodes/north-america/">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+          North America
+        </a>
+      </div>
+      <div class="regional-node-item">
+        <a href="/nodes/latin-america/">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+          Latin America
+        </a>
+      </div>
+      <div class="regional-node-item">
+        <a href="/nodes/eu/">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+          European Union
+        </a>
+      </div>
+      <div class="regional-node-item">
+        <a href="/nodes/uk/">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+          United Kingdom
+        </a>
+      </div>
+      <div class="regional-node-item">
+        <a href="/nodes/africa/">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+          Sub-Saharan Africa
+        </a>
+      </div>
+      <div class="regional-node-item">
+        <a href="/nodes/south-asia/">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+          South Asia
+        </a>
+      </div>
+      <div class="regional-node-item">
+        <a href="/nodes/pacific/">
+          <span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span>
+          Pacific
+        </a>
+      </div>
+      <div class="regional-node-item">
+        <a href="/nodes/">
+          <span class="dot" style="width:6px;height:6px;background:var(--ink-line)" aria-hidden="true"></span>
+          + More regions
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hire-cta-bar">
+    <p class="hire-cta-text">Ready to start a project?</p>
+    <a href="/contact/" class="btn btn-primary">
+      Talk to someone
+      <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+    </a>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 6 — MEMBERS & ORGS
+     ══════════════════════════════════════════════════════════════ -->
+<section class="members-section">
+  <div class="section-inner">
+
+    <div class="members-header">
+      <span class="eyebrow" style="margin-bottom:14px;display:inline-flex">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-yellow-deep)" aria-hidden="true"></span>
+        The network
+      </span>
+      <h2 class="members-title">Explore the network.</h2>
+      <p class="members-subtitle">Woven from independent practitioners, boutique consultancies, and mission-driven organizations at the frontier of systems change.</p>
+    </div>
+
+    <!-- Highlighted Individuals -->
+    <div class="members-group">
+      <div class="members-group-label">Highlighted members</div>
+      <div class="member-cards-grid">
+
+        <a href="/members/malia-fonoti/" class="member-card">
+          <div class="member-card-mono">MF</div>
+          <p class="member-card-name">Malia Fonoti</p>
+          <p class="member-card-role">Governance designer &amp; commons law practitioner</p>
+          <div class="member-card-tags">
+            <span class="member-tag">Governance</span>
+            <span class="member-tag">Commons Law</span>
+          </div>
+        </a>
+
+        <a href="/members/yaw-darko/" class="member-card">
+          <div class="member-card-mono">YD</div>
+          <p class="member-card-name">Yaw Darko</p>
+          <p class="member-card-role">Regenerative finance researcher &amp; strategist</p>
+          <div class="member-card-tags">
+            <span class="member-tag">Finance</span>
+            <span class="member-tag">Treasury</span>
+          </div>
+        </a>
+
+        <a href="/members/seo-yeon-park/" class="member-card">
+          <div class="member-card-mono">SP</div>
+          <p class="member-card-name">Seo-yeon Park</p>
+          <p class="member-card-role">Sense-making facilitator &amp; network weaver</p>
+          <div class="member-card-tags">
+            <span class="member-tag">Facilitation</span>
+            <span class="member-tag">Networks</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Highlighted Service Orgs -->
+    <div class="members-group">
+      <div class="members-group-label">Highlighted service orgs</div>
+      <div class="member-cards-grid">
+
+        <a href="/orgs/commons-engine/" class="member-card">
+          <div class="member-card-mono">CE</div>
+          <p class="member-card-name">Commons Engine</p>
+          <p class="member-card-role">Commons law, shared governance &amp; legal architecture</p>
+          <div class="member-card-tags">
+            <span class="member-tag">Legal</span>
+            <span class="member-tag">Governance</span>
+          </div>
+        </a>
+
+        <a href="/orgs/dark-matter-labs/" class="member-card">
+          <div class="member-card-mono">DM</div>
+          <p class="member-card-name">Dark Matter Labs</p>
+          <p class="member-card-role">Mission-driven research, design &amp; systems change</p>
+          <div class="member-card-tags">
+            <span class="member-tag">Research</span>
+            <span class="member-tag">Design</span>
+          </div>
+        </a>
+
+        <a href="/orgs/other-internet/" class="member-card">
+          <div class="member-card-mono">OI</div>
+          <p class="member-card-name">Other Internet</p>
+          <p class="member-card-role">Research at the intersection of technology &amp; collective life</p>
+          <div class="member-card-tags">
+            <span class="member-tag">Technology</span>
+            <span class="member-tag">Research</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Highlighted Product Orgs -->
+    <div class="members-group" style="margin-bottom:0">
+      <div class="members-group-label">Highlighted product orgs</div>
+      <div class="member-cards-grid">
+
+        <a href="/orgs/hypha/" class="member-card">
+          <div class="member-card-mono">HY</div>
+          <p class="member-card-name">Hypha</p>
+          <p class="member-card-role">Cooperative infrastructure &amp; tooling for distributed organizations</p>
+          <div class="member-card-tags">
+            <span class="member-tag">Infrastructure</span>
+            <span class="member-tag">Tooling</span>
+          </div>
+        </a>
+
+        <a href="/orgs/regen-network/" class="member-card">
+          <div class="member-card-mono">RN</div>
+          <p class="member-card-name">Regen Network</p>
+          <p class="member-card-role">Ecological data infrastructure &amp; regenerative finance rails</p>
+          <div class="member-card-tags">
+            <span class="member-tag">Finance</span>
+            <span class="member-tag">Ecology</span>
+          </div>
+        </a>
+
+        <a href="/orgs/blockscience/" class="member-card">
+          <div class="member-card-mono">BS</div>
+          <p class="member-card-name">BlockScience</p>
+          <p class="member-card-role">Complex systems engineering &amp; token economics</p>
+          <div class="member-card-tags">
+            <span class="member-tag">Systems</span>
+            <span class="member-tag">Token Econ</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <div style="margin-top:40px;text-align:center">
+      <a href="/members/" class="btn btn-secondary">
+        Browse the full network
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 7 — JOIN INFO
+     ══════════════════════════════════════════════════════════════ -->
+<section class="join-section">
+  <div class="join-inner">
+
+    <span class="eyebrow join-eyebrow" style="color:var(--q-yellow)">
+      <span class="dot" style="width:8px;height:8px;background:var(--q-yellow)" aria-hidden="true"></span>
+      Joining the network
+    </span>
+    <h2 class="join-title">There is a place for you here.</h2>
+    <p class="join-subtitle">Whether you're a solo practitioner, a boutique firm, or an organization working at the frontier of systems change &mdash; quorum1 was built for you. Choose your path in.</p>
+
+    <div class="join-cards-grid">
+
+      <div class="join-card">
+        <span class="join-card-accent" style="background:var(--q-blue)" aria-hidden="true"></span>
+        <h3 class="join-card-title">Join as an individual.</h3>
+        <p class="join-card-body">Independent practitioners join free. Gain access to the shared knowledge commons, member dispatches, collaborative projects, and the quorum1 brand network.</p>
+        <div class="join-card-cta">
+          <a href="/join/individual/" class="btn btn-ink">
+            Become a member
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="join-card">
+        <span class="join-card-accent" style="background:var(--q-yellow)" aria-hidden="true"></span>
+        <h3 class="join-card-title">Join as an org.</h3>
+        <p class="join-card-body">Member organizations join for a small onboarding contribution ($400&ndash;$600). Unlock co-marketing, shared brand halo, joint proposals, and lead pipeline access.</p>
+        <div class="join-card-cta">
+          <a href="/join/org/" class="btn btn-ink">
+            Weave into the network
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="join-card">
+        <span class="join-card-accent" style="background:var(--q-red)" aria-hidden="true"></span>
+        <h3 class="join-card-title">Create a node.</h3>
+        <p class="join-card-body">Organize a guild of service providers around a practice area or region. Earn 10% of every project routed through your node to fund your own sales, marketing &amp; research.</p>
+        <div class="join-card-cta">
+          <a href="/nodes/create/" class="btn btn-ink">
+            Learn how nodes work
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 8 — NODE EXPLAINER
+     ══════════════════════════════════════════════════════════════ -->
+<section class="nodes" id="nodes">
+  <div class="nodes-grid">
 
     <div>
       <span class="eyebrow nodes-eyebrow">How we organize</span>
       <h2 class="nodes-title">Nodes do the work the brand can't.</h2>
-      <p class="nodes-intro">
-        Twenty percent of every Quorum1 project flows back to nodes — ten to a
-        region node, ten to a practice node — funding the sales, marketing, and
-        research that keep the collective self-sustaining.
-      </p>
+      <p class="nodes-intro">Twenty percent of every Quorum1 project flows back to nodes &mdash; ten to a region node, ten to a practice node &mdash; funding the sales, marketing, and research that keep the collective self-sustaining.</p>
       <div class="nodes-tabs" role="tablist" aria-label="Node types">
         <button class="nodes-tab active" role="tab" aria-selected="true" data-panel="practice">Practice nodes</button>
         <button class="nodes-tab" role="tab" aria-selected="false" data-panel="region">Region nodes</button>
@@ -194,12 +635,11 @@ layout: layouts/home.njk
     </div>
 
     <div>
-      <!-- Practice panel (default visible) -->
       <div class="nodes-panel" id="panel-practice" role="tabpanel">
         <span class="nodes-panel-dot" style="background:var(--q-blue)" aria-hidden="true"></span>
         <span class="eyebrow nodes-panel-tagline">Communities of expertise.</span>
         <h3 class="nodes-panel-title">Practice nodes</h3>
-        <p class="nodes-panel-body">Practice nodes are member-led collectives organized around a domain — governance design, regenerative finance, commons law, decentralized infrastructure, sense-making. Each node curates its own thought work, runs joint research, and receives 10% of every project routed through its practice.</p>
+        <p class="nodes-panel-body">Practice nodes are member-led collectives organized around a domain &mdash; governance design, regenerative finance, commons law, decentralized infrastructure, sense-making. Each node curates its own thought work, runs joint research, and receives 10% of every project routed through its practice.</p>
         <div class="nodes-tags">
           <span class="nodes-tag"><span class="dot" style="width:6px;height:6px;background:var(--q-blue)" aria-hidden="true"></span> Governance Design</span>
           <span class="nodes-tag"><span class="dot" style="width:6px;height:6px;background:var(--q-blue)" aria-hidden="true"></span> Regenerative Finance</span>
@@ -211,12 +651,11 @@ layout: layouts/home.njk
         </div>
       </div>
 
-      <!-- Region panel (hidden by default) -->
       <div class="nodes-panel" id="panel-region" role="tabpanel" hidden>
         <span class="nodes-panel-dot" style="background:var(--q-red)" aria-hidden="true"></span>
         <span class="eyebrow nodes-panel-tagline">Geography is still real.</span>
         <h3 class="nodes-panel-title">Region nodes</h3>
-        <p class="nodes-panel-body">Region nodes route work to practitioners on the ground — local language, local law, local trust. They host gatherings, brief inbound clients, and recycle 10% of project revenue into community sales &amp; marketing.</p>
+        <p class="nodes-panel-body">Region nodes route work to practitioners on the ground &mdash; local language, local law, local trust. They host gatherings, brief inbound clients, and recycle 10% of project revenue into community sales &amp; marketing.</p>
         <div class="nodes-tags">
           <span class="nodes-tag"><span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span> North America</span>
           <span class="nodes-tag"><span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span> Latin America</span>
@@ -226,6 +665,59 @@ layout: layouts/home.njk
           <span class="nodes-tag"><span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span> South Asia</span>
           <span class="nodes-tag"><span class="dot" style="width:6px;height:6px;background:var(--q-red)" aria-hidden="true"></span> Pacific</span>
         </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION 9 — ABOUT
+     ══════════════════════════════════════════════════════════════ -->
+<section class="about-section">
+  <div class="about-inner section-inner">
+
+    <div>
+      <span class="eyebrow about-eyebrow">
+        <span class="dot" style="width:8px;height:8px;background:var(--q-red)" aria-hidden="true"></span>
+        About quorum1
+      </span>
+      <h2 class="about-title">We are the future we are helping to build.</h2>
+      <p class="about-body">Quorum1 is the world's first meta-consultancy for systems change. We are an <strong>ecomimetic organization</strong> &mdash; our governance model, treasury structure, and operations are all designed using the same regenerative, commons-based principles we help our clients adopt.</p>
+      <p class="about-body">Founded in 2021, quorum1 operates as a self-governing collective. There is no single parent company. The brand is collectively stewarded by member organizations through a transparent governance stack. Revenue flows back to members and nodes, not to shareholders.</p>
+      <p class="about-body" style="margin-bottom:0">We believe the models for a post-extractive future already exist &mdash; scattered across nodes, organizations, and individuals who haven't yet found each other. <strong>Quorum1 is the front door.</strong></p>
+      <div class="about-cta">
+        <a href="/about/" class="btn btn-secondary">
+          Our full story
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="about-sidebar">
+      <div class="about-fact">
+        <span class="about-fact-label">Founded</span>
+        <span class="about-fact-value">2021</span>
+      </div>
+      <div class="about-fact">
+        <span class="about-fact-label">Structure</span>
+        <span class="about-fact-value">Meta-collective</span>
+      </div>
+      <div class="about-fact">
+        <span class="about-fact-label">Members</span>
+        <span class="about-fact-value">600+</span>
+      </div>
+      <div class="about-fact">
+        <span class="about-fact-label">Nodes</span>
+        <span class="about-fact-value">14 active</span>
+      </div>
+      <div class="about-fact">
+        <span class="about-fact-label">Reach</span>
+        <span class="about-fact-value">30+ countries</span>
+      </div>
+      <div class="about-fact">
+        <span class="about-fact-label">Revenue model</span>
+        <span class="about-fact-value">20% to nodes</span>
       </div>
     </div>
 
